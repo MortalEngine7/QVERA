@@ -1,0 +1,54 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sarth\.gemini\antigravity\scratch\qvera\backend
+plugins: anyio-4.15.1
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_qvera.py _____________________
+ImportError while importing test module 'C:\Users\sarth\.gemini\antigravity\scratch\qvera\backend\tests\test_qvera.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\_pytest\python.py:508: in importtestmodule
+    mod = import_path(
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\_pytest\pathlib.py:596: in import_path
+    importlib.import_module(module_name)
+C:\Python314\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1398: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1371: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1342: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:938: in _load_unlocked
+    ???
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\_pytest\assertion\rewrite.py:188: in exec_module
+    exec(co, module.__dict__)
+tests\test_qvera.py:3: in <module>
+    from fastapi.testclient import TestClient
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\__init__.py:7: in <module>
+    from .applications import FastAPI as FastAPI
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\applications.py:13: in <module>
+    from fastapi import routing
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\routing.py:25: in <module>
+    from fastapi import params, temp_pydantic_v1_params
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\params.py:7: in <module>
+    from fastapi.openapi.models import Example
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\openapi\models.py:5: in <module>
+    from fastapi._compat import (
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\_compat\__init__.py:1: in <module>
+    from .main import BaseConfig as BaseConfig
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\_compat\main.py:8: in <module>
+    from fastapi._compat import may_v1
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\_compat\may_v1.py:60: in <module>
+    from .v2 import ValidationError, create_model
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\fastapi\_compat\v2.py:17: in <module>
+    from pydantic import BaseModel, ConfigDict, Field, TypeAdapter, create_model
+E   ImportError: cannot import name 'TypeAdapter' from 'pydantic' (C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\pydantic\__init__.py)
+=========================== short test summary info ===========================
+ERROR tests/test_qvera.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.46s ===============================

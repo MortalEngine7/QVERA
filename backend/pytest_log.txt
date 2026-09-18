@@ -1,0 +1,51 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.1.1, pluggy-1.6.0 -- C:\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\sarth\.gemini\antigravity\scratch\qvera\backend
+plugins: anyio-4.15.1
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+____________________ ERROR collecting tests/test_qvera.py _____________________
+tests\test_qvera.py:5: in <module>
+    from main import app
+main.py:3: in <module>
+    from database.session import init_db
+database\__init__.py:1: in <module>
+    from .models import Base, SessionModel, TransferModel, SecurityEvent
+database\models.py:1: in <module>
+    from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, ForeignKey
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\__init__.py:13: in <module>
+    from .engine import AdaptedConnection as AdaptedConnection
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\engine\__init__.py:18: in <module>
+    from . import events as events
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\engine\events.py:19: in <module>
+    from .base import Connection
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\engine\base.py:30: in <module>
+    from .interfaces import BindTyping
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\engine\interfaces.py:38: in <module>
+    from ..sql.compiler import Compiled as Compiled
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\__init__.py:14: in <module>
+    from .compiler import COLLECT_CARTESIAN_PRODUCTS as COLLECT_CARTESIAN_PRODUCTS
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\compiler.py:61: in <module>
+    from . import crud
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\crud.py:34: in <module>
+    from . import dml
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\dml.py:34: in <module>
+    from . import util as sql_util
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\util.py:46: in <module>
+    from .ddl import sort_tables as sort_tables  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\ddl.py:30: in <module>
+    from .elements import ClauseElement
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\sql\elements.py:808: in <module>
+    class SQLCoreOperations(Generic[_T_co], ColumnOperators, TypingOnly):
+C:\Python314\Lib\typing.py:1175: in _generic_init_subclass
+    super(Generic, cls).__init_subclass__(*args, **kwargs)
+C:\Users\sarth\AppData\Roaming\Python\Python314\site-packages\sqlalchemy\util\langhelpers.py:1980: in __init_subclass__
+    raise AssertionError(
+E   AssertionError: Class <class 'sqlalchemy.sql.elements.SQLCoreOperations'> directly inherits TypingOnly but has additional attributes {'__firstlineno__', '__static_attributes__'}.
+=========================== short test summary info ===========================
+ERROR tests/test_qvera.py - AssertionError: Class <class 'sqlalchemy.sql.elements.SQLCoreOperations'> directly inherits TypingOnly but has additional attributes {'__firstlineno__', '__static_attributes__'}.
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.95s ===============================
